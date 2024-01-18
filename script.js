@@ -105,7 +105,7 @@ gsap.from(".companyLogo", {
     trigger: ".companyLogo",
     start: "top 30%",
     end: "bottom 90%",
-    scrub: 1,
+    scrub: 3,
     // markers: true,
   },
 });
@@ -119,7 +119,7 @@ gsap.from(".clock", {
     trigger: ".clock",
     start: "top 35%",
     end: "bottom 90%",
-    scrub: 1,
+    scrub: 3,
     // markers: true,
   },
 });
@@ -147,7 +147,7 @@ gsap.from(".two h3", {
     trigger: ".two h3",
     start: "top 50%",
     end: "top 80%",
-    scrub: 1,
+    scrub: 3,
     // markers: true,
   },
 });
