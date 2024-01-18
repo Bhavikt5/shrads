@@ -1,0 +1,205 @@
+@font-face {
+  font-family: Product Sans;
+  src: url(Fonts/Product\ Sans\ Regular.ttf);
+}
+@font-face {
+  font-family: Product Sans B;
+  src: url(Fonts/Product\ Sans\ Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Product Sans;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  background-color: orangered;
+  position: relative;
+}
+
+.one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgb(236, 152, 152);
+}
+
+#girl {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  height: 300px;
+  z-index: 9999;
+  transition: all ease;
+  transform: scale(0);
+}
+
+.localTrain {
+  position: absolute;
+  width: 800px;
+  right: -100%;
+  top: 0;
+}
+
+.vidyavihar {
+  position: absolute;
+  /* width: 50%; */
+  left: 5%;
+  top: 5%;
+  transform: scale(0);
+}
+
+.one h3 {
+  position: absolute;
+  bottom: 4rem;
+  left: 30%;
+  width: 30%;
+  font-size: 3vw;
+  text-align: right;
+}
+
+.content {
+  font-size: 3vw;
+}
+.two,
+.three,
+.four,
+.five {
+  height: 100vh;
+  width: 100%;
+  background: rgb(236, 152, 152);
+  position: relative;
+}
+
+.companyLogo {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 400px;
+  transform: rotate(15deg);
+}
+.clock {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  width: 150px;
+}
+
+.two h3 {
+  position: absolute;
+  top: 30%;
+  width: 30%;
+  left: 50%;
+}
+.smit {
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+  width: 200px;
+}
+.three {
+  text-align: right;
+}
+.three h3 {
+  font-size: 12vw;
+}
+
+.kinjal {
+  position: absolute;
+  right: 15%;
+  height: 300px;
+  transform: scale(1.2);
+}
+.four .kin {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  font-size: 3.5vw;
+}
+
+.four .shr {
+  position: absolute;
+  top: 30%;
+  right: 25%;
+  font-size: 3.5vw;
+}
+
+.five h3 {
+  position: absolute;
+  left: 5%;
+  top: -15%;
+  text-align: right;
+}
+
+.golu {
+  position: absolute;
+  right: 5%;
+  top: -10%;
+}
+
+.workContent {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: 10vw;
+}
+.six {
+  min-height: 200vh;
+  width: 100%;
+  background: rgb(236, 152, 152);
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.box img {
+  height: 400px;
+}
+.box h3 {
+  font-size: 4vw;
+}
+
+.section6 {
+  overflow: hidden;
+}
+.moving_text_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  animation: move linear infinite 15s;
+}
+.moving_text_1 h2,
+.moving_text_2 h2 {
+  font-size: 7vw;
+  margin: 0 30px;
+}
+.moving_text_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  animation: move2 linear infinite 15s;
+}
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
