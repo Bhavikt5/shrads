@@ -14,6 +14,10 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --bgColor: rgb(245, 226, 229);
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -21,7 +25,6 @@ body::-webkit-scrollbar {
 #main {
   width: 100%;
   height: 100vh;
-  background-color: orangered;
   position: relative;
 }
 
@@ -31,7 +34,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: rgb(236, 152, 152);
+  background: var(--bgColor);
 }
 
 #girl {
@@ -48,13 +51,13 @@ body::-webkit-scrollbar {
   position: absolute;
   width: 800px;
   right: -100%;
-  top: 0;
+  top: 5%;
 }
 
 .vidyavihar {
   position: absolute;
   /* width: 50%; */
-  left: 5%;
+  left: 10%;
   top: 5%;
   transform: scale(0);
 }
@@ -77,7 +80,7 @@ body::-webkit-scrollbar {
 .five {
   height: 100vh;
   width: 100%;
-  background: rgb(236, 152, 152);
+  background: var(--bgColor);
   position: relative;
 }
 
@@ -156,7 +159,7 @@ body::-webkit-scrollbar {
 .six {
   min-height: 200vh;
   width: 100%;
-  background: rgb(236, 152, 152);
+  background: var(--bgColor);
 }
 
 .box {
@@ -167,7 +170,7 @@ body::-webkit-scrollbar {
 }
 
 .box img {
-  height: 400px;
+  height: 300px;
 }
 .box h3 {
   font-size: 4vw;
@@ -175,6 +178,8 @@ body::-webkit-scrollbar {
 
 .section6 {
   overflow: hidden;
+  background: var(--bgColor);
+  padding: 3rem 0;
 }
 .moving_text_1 {
   display: flex;
@@ -182,6 +187,7 @@ body::-webkit-scrollbar {
   align-items: center;
   white-space: nowrap;
   animation: move linear infinite 15s;
+  background: var(--bgColor);
 }
 .moving_text_1 h2,
 .moving_text_2 h2 {
@@ -202,4 +208,43 @@ body::-webkit-scrollbar {
   to {
     transform: translateX(-100%);
   }
+}
+.seven {
+  min-height: 140vh;
+  width: 100%;
+  position: relative;
+}
+.seven h1 {
+  font-size: 10vw;
+  text-align: right;
+  padding-top: 3rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+.finalImg {
+  position: absolute;
+  top: 27%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  width: 230px;
+  z-index: 9;
+  /* transform: scale(0); */
+}
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 3rem;
+}
+
+.names h2 {
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 3vw;
+  border-radius: 4px;
 }

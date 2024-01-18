@@ -1,16 +1,37 @@
-// const lenis = new Lenis();
+function loco() {
+  gsap.registerPlugin(ScrollTrigger);
 
-// lenis.on("scroll", (e) => {
-//   console.log(e);
-// });
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+  });
+  locoScroll.on("scroll", ScrollTrigger.update);
 
-// lenis.on("scroll", ScrollTrigger.update);
+  ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
 
-// gsap.ticker.add((time) => {
-//   lenis.raf(time * 1000);
-// });
+    pinType: document.querySelector("#main").style.transform
+      ? "transform"
+      : "fixed",
+  });
 
-// gsap.ticker.lagSmoothing(0);
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  ScrollTrigger.refresh();
+}
+
+loco();
 
 var heroTl = gsap.timeline({});
 
@@ -26,9 +47,7 @@ heroTl.to(".vidyavihar", {
 });
 
 heroTl.to("#girl", {
-  right: "0%",
   scale: 0.7,
-  duration: 1,
 });
 
 var oneTl = gsap.timeline({
@@ -37,7 +56,7 @@ var oneTl = gsap.timeline({
     start: "50% center",
     end: "70% center",
     scrub: true,
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -271,4 +290,36 @@ gsap.from(".six .box1,.six .box2,.six .box3,.six .box4", {
   delay: 1,
   stagger: 0.6,
   duration: 1,
+});
+
+// gsap.from(".finalImg", {
+//   scrollTrigger: {
+//     trigger: ".finalImg ",
+//     start: "-40% 20%",
+//     end: "60% 90%",
+//     scrub: 1,
+//     markers: true,
+//     pin: true,
+//   },
+//   scale: 1,
+//   y: 100,
+//   opacity: 0,
+//   delay: 1,
+//   stagger: 0.6,
+//   duration: 1,
+// });
+
+gsap.from(".names h2", {
+  scrollTrigger: {
+    trigger: ".names ",
+    start: "top 40%",
+    end: "bottom 90%",
+    // scrub: 1,
+    // markers: true,
+  },
+  y: -30,
+  duration: 0.5,
+  delay: 0.5,
+  opacity: 0,
+  stagger: 0.5,
 });
