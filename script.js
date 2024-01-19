@@ -299,7 +299,7 @@ gsap.from(".finalImg", {
     start: "top 20%",
     end: "bottom 90%",
     scrub: 1,
-    markers: true,
+    // markers: true,
     // pin: true,
   },
   // scale: 1,
