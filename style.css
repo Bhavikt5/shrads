@@ -206,18 +206,11 @@ body::-webkit-scrollbar {
   animation: move linear infinite 15s;
   background: var(--bgColor);
 }
-.moving_text_1 h2,
-.moving_text_2 h2 {
+.moving_text_1 h2 {
   font-size: 7vw;
   margin: 0 30px;
 }
-.moving_text_2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  animation: move2 linear infinite 15s;
-}
+
 @keyframes move {
   from {
     transform: translateX(0);
@@ -287,7 +280,43 @@ body::-webkit-scrollbar {
     height: 200px;
   }
   .one,
-  .two {
+  .two,
+  .three,
+  .four,
+  .five {
     height: 50vh;
+  }
+  .companyLogo {
+    width: 100px;
+  }
+  .clock {
+    width: 100px;
+  }
+  .smit {
+    width: 150px;
+  }
+  .kinjal {
+    height: 150px;
+  }
+  .golu {
+    width: 200px;
+  }
+  .box img {
+    height: 150px;
+  }
+  .seven .names {
+    justify-content: left;
+    padding: 1rem !important;
+    margin: 0 !important;
+  }
+  .names h2 {
+    margin: 0 !important;
+  }
+  .singgif {
+    width: 70px;
+  }
+  .finalImg {
+    width: 135px;
+    left: 60%;
   }
 }
