@@ -15,7 +15,7 @@
 }
 
 :root {
-  --bgColor: rgb(245, 226, 229);
+  --bgColor: rgb(250, 240, 242);
 }
 
 body::-webkit-scrollbar {
@@ -265,4 +265,29 @@ body::-webkit-scrollbar {
   padding: 10px 20px;
   font-size: 3vw;
   border-radius: 4px;
+}
+
+@media (max-width: 520px) {
+  #main {
+    height: 50vh;
+  }
+  .localTrain {
+    width: 400px;
+  }
+  .vidyavihar {
+    width: 50%;
+    right: 30%;
+    left: auto;
+  }
+
+  #girl {
+    top: 0 !important;
+    left: 10%;
+    right: auto;
+    height: 200px;
+  }
+  .one,
+  .two {
+    height: 50vh;
+  }
 }

@@ -34,6 +34,7 @@ function loco() {
 loco();
 
 var heroTl = gsap.timeline({});
+var mm = gsap.matchMedia();
 
 heroTl.to(".localTrain", {
   right: "0%",
@@ -292,22 +293,22 @@ gsap.from(".six .box1,.six .box2,.six .box3,.six .box4", {
   duration: 1,
 });
 
-// gsap.from(".finalImg", {
-//   scrollTrigger: {
-//     trigger: ".finalImg ",
-//     start: "-40% 20%",
-//     end: "60% 90%",
-//     scrub: 1,
-//     markers: true,
-//     pin: true,
-//   },
-//   scale: 1,
-//   y: 100,
-//   opacity: 0,
-//   delay: 1,
-//   stagger: 0.6,
-//   duration: 1,
-// });
+gsap.from(".finalImg", {
+  scrollTrigger: {
+    trigger: ".seven ",
+    start: "top 20%",
+    end: "bottom 90%",
+    scrub: 1,
+    markers: true,
+    // pin: true,
+  },
+  // scale: 1,
+  y: 100,
+  opacity: 0,
+  delay: 1,
+  // stagger: 0.6,
+  duration: 1,
+});
 
 gsap.from(".names h2", {
   scrollTrigger: {
